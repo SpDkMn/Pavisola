@@ -81,11 +81,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 VentanaPrincipal v = new VentanaPrincipal();
-                //v.getContentPane().add(new PanelPrincipal());
-                v.getContentPane().add(new AgregarPedido());
-                v.getContentPane().add(new PedidoActivo());
-                v.getContentPane().add(new CobrarPedido());
-                v.getContentPane().add(new ReabastecerStock());
+                v.getContentPane().add(new PanelPrincipal());
+                //v.getContentPane().add(new AgregarPedido()); // Agregar Pedido
+                //v.getContentPane().add(new PedidoActivo()); // Entregar Pedido
+                //v.getContentPane().add(new CobrarPedido()); // Cobrar Pedido
+                //v.getContentPane().add(new ReabastecerStock()); // Reabastecer Stock
                 
                 v.setVisible(true);
             }
