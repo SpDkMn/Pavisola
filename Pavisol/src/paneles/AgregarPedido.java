@@ -5,6 +5,9 @@
  */
 package paneles;
 
+import entidades.Cliente;
+import java.util.Vector;
+
 /**
  *
  * @author Pedro
@@ -16,6 +19,11 @@ public class AgregarPedido extends javax.swing.JPanel {
      */
     public AgregarPedido() {
         initComponents();
+        jComboBox1.removeAllItems();
+        Vector<Cliente> vc = Cliente.getAll();
+        for (Cliente vc1 : vc) {
+            jComboBox1.addItem(vc1.getNombre());
+        }
     }
 
     /**
@@ -34,6 +42,8 @@ public class AgregarPedido extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton1 = new javax.swing.JButton();
+
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Seleccionar cliente:");

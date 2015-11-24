@@ -11,7 +11,11 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
+import paneles.AgregarPedido;
+import paneles.CobrarPedido;
 import paneles.PanelPrincipal;
+import paneles.PedidoActivo;
+import paneles.ReabastecerStock;
 
 /**
  *
@@ -77,7 +81,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 VentanaPrincipal v = new VentanaPrincipal();
-                v.getContentPane().add(new PanelPrincipal());
+                //v.getContentPane().add(new PanelPrincipal());
+                v.getContentPane().add(new AgregarPedido());
+                v.getContentPane().add(new PedidoActivo());
+                v.getContentPane().add(new CobrarPedido());
+                v.getContentPane().add(new ReabastecerStock());
+                
                 v.setVisible(true);
             }
         });
