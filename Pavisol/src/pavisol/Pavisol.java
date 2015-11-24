@@ -5,6 +5,8 @@
  */
 package pavisol;
 
+import BD.BaseDatos;
+
 /**
  *
  * @author Pedro
@@ -16,6 +18,8 @@ public class Pavisol {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        BaseDatos baseDatos = new BaseDatos();
+        baseDatos.conectar();
     }
     
 }
