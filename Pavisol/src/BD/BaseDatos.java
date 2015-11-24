@@ -5,16 +5,14 @@
  */
 package BD;
 
-import java.sql.*;
-/*import java.sql.Connection;
- import java.sql.DriverManager;
- import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
- /**
+/**
  *
  * @author Pedro
  */
-
 public class BaseDatos {
 
     private final String URL = "jdbc:mysql://localhost:3306/";

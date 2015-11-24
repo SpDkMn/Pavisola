@@ -11,8 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
-import paneles.Menu;
-import paneles.Title;
+import paneles.PanelPrincipal;
 
 /**
  *
@@ -78,24 +77,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 VentanaPrincipal v = new VentanaPrincipal();
-                try {
-                    Title t = new Title();
-                    t.setLocation(0, 0);
-                    v.getContentPane().add(t);
-                    
-                } catch (IOException ex) {
-                    Logger.getLogger(VentanaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                Menu m = new Menu();
-                v.getContentPane().add(m);
-                JPanel panel1 = new JPanel();
-                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(panel1);
-                panel1.setLayout(layout);
-                panel1.setMaximumSize(new Dimension(526,490));
-                panel1.setMinimumSize(new Dimension(526,490));
-                panel1.setSize(new Dimension(526,490));
-                panel1.setBackground(Color.red);
-                v.getContentPane().add(panel1);
+                v.getContentPane().add(new PanelPrincipal());
                 v.setVisible(true);
             }
         });
