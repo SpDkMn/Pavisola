@@ -5,6 +5,8 @@
  */
 package entidades;
 
+import java.util.Vector;
+
 /**
  *
  * @author Pedro
@@ -13,7 +15,7 @@ public class Pedido {
     private int id;
     private String codigo;
     private int numero_orden;
-    private int cliente;
+    private Cliente cliente;
     private String fecha_recepcion;
     private String fecha_entrega;
     private int entregado;
@@ -23,11 +25,12 @@ public class Pedido {
     private Double sub_total;
     private Double IGV;
     private Double total;
+    private Vector<Producto> vp;
 
     public Pedido() {
     }
 
-    public Pedido(int id, String codigo, int numero_orden, int cliente, String fecha_recepcion, String fecha_entrega, int entregado, int pagado, int generado, int anulado, Double sub_total, Double IGV, Double total) {
+    public Pedido(int id, String codigo, int numero_orden, Cliente cliente, String fecha_recepcion, String fecha_entrega, int entregado, int pagado, int generado, int anulado, Double sub_total, Double IGV, Double total) {
         this.id = id;
         this.codigo = codigo;
         this.numero_orden = numero_orden;
@@ -41,6 +44,18 @@ public class Pedido {
         this.sub_total = sub_total;
         this.IGV = IGV;
         this.total = total;
+    }
+    
+    public Vector<Producto> getVp() {
+        return vp;
+    }
+
+    public void setVp(Vector<Producto> vp) {
+        this.vp = vp;
+    }
+    
+    public void setProducto(Producto p){
+        this.vp.add(p);
     }
 
     public int getId() {
@@ -67,11 +82,11 @@ public class Pedido {
         this.numero_orden = numero_orden;
     }
 
-    public int getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(int cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 

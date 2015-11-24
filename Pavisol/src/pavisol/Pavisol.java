@@ -6,6 +6,9 @@
 package pavisol;
 
 import BD.BaseDatos;
+import entidades.Cliente;
+import entidades.Producto;
+import java.util.Vector;
 
 /**
  *
@@ -18,8 +21,30 @@ public class Pavisol {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        BaseDatos baseDatos = new BaseDatos();
-        baseDatos.conectar();
+        
+        //BaseDatos baseDatos = new BaseDatos();
+        //baseDatos.conectar();
+        
+        //Vector<Cliente> vc = Cliente.getAll();
+        //for (Object vc1 : vc) {
+        //    System.out.println(vc1);
+        //}
+        
+        //Cliente c = Cliente.getCliente(3);
+        //System.out.println(c);
+        
+        //Vector<Producto> vp = Producto.getAll();
+        //for (Object vp1 : vp) {
+        //    System.out.println(vp1);
+        //}
+        
+        //Producto p = Producto.getProducto(2);
+        //System.out.println(p);
+        
+        //Producto p = Producto.getProducto(13);
+        //p.setCantidad(84);
+        //System.out.println(Producto.updateProducto(p));
+        
     }
     
 }

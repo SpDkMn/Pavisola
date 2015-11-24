@@ -12,7 +12,7 @@ package entidades;
 public class Factura {
     private int id;
     private String cod_factura;
-    private int pedido;
+    private Pedido pedido;
     private Double total;
     private String fecha;
     private int pagado;
@@ -36,11 +36,11 @@ public class Factura {
         this.cod_factura = cod_factura;
     }
 
-    public int getPedido() {
+    public Pedido getPedido() {
         return pedido;
     }
 
-    public void setPedido(int pedido) {
+    public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
 
